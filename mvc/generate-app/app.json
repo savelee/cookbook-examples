@@ -1,0 +1,74 @@
+{
+  "name": "FindACab",
+  "indexHtmlPath": "index.html",
+  "url": null,
+  "js": [
+    {
+      "path": "../../touch/sencha-touch.js",
+      "x-bootstrap": true
+    },
+    {
+      "path": "bootstrap.js",
+      "x-bootstrap": true
+    },
+    {
+      "path": "app.js",
+      "bundle": true,
+      "update": "delta"
+    }
+  ],
+  "css": [
+    {
+      "path": "resources/css/app.css",
+      "update": "delta"
+    }
+  ],
+  "appCache": {
+    "cache": [
+      "index.html"
+    ],
+    "network": [
+      "*"
+    ],
+    "fallback": []
+  },
+  "resources": [
+    "resources/images",
+    "resources/icons",
+    "resources/startup"
+  ],
+  "ignore": [
+    ".svn$"
+  ],
+  "archivePath": "archive",
+  "requires": [],
+  "id": "0ff87367-e553-4206-8462-78ea714e2956",
+  "platform": "web",
+  "platforms": {
+    "web": {},
+    "ios": {
+      "package": "com.myCompany",
+      "js": [
+        {
+          "path": "native/src/ios/cordova.js"
+        }
+      ]
+    },
+    "android": {
+      "package": "com.myCompany",
+      "js": [
+        {
+          "path": "native/src/android/cordova.js"
+        }
+      ]
+    },
+    "bb10": {
+      "package": "com.myCompany",
+      "js": [
+        {
+          "path": "native/src/bb10/cordova.js"
+        }
+      ]
+    }
+  }
+}
