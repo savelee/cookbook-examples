@@ -1,5 +1,5 @@
-Ext.define('VehicleApp.mixins.Drive', { //<1>
-  drive: function(){ //<2>
+Ext.define('VehicleApp.mixins.Drive', {
+  drive: function(){ //the method to share
     console.log(this.$className + ": Vrrrrooom");
   }
 });

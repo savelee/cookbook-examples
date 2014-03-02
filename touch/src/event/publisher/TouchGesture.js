@@ -404,7 +404,11 @@ Ext.define('Ext.event.publisher.TouchGesture', {
                 MSPointerDown: 'touchstart',
                 MSPointerMove: 'touchmove',
                 MSPointerUp: 'touchend',
-                MSPointerCancel: 'touchcancel'
+                MSPointerCancel: 'touchcancel',
+                pointerdown: 'touchstart',
+                pointermove: 'touchmove',
+                pointerup: 'touchend',
+                pointercancel: 'touchcancel'
             },
 
             touchToPointerMap: {

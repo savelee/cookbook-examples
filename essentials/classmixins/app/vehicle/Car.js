@@ -1,6 +1,6 @@
-Ext.define('VehicleApp.vehicle.Car', { //<1>
-  mixins: { //<2>
-    canBrake: 'VehicleApp.mixins.Brake', //<3>
+Ext.define('VehicleApp.vehicle.Car', {
+  mixins: {
+    canBrake: 'VehicleApp.mixins.Brake',
     canDrive: 'VehicleApp.mixins.Drive'
   }
 });

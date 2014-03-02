@@ -6,16 +6,6 @@
     limit your changes to this file.
     -->
     <import file="${basedir}/.sencha/app/build-impl.xml"/>
-    <import file="${basedir}/.sencha/app/build-cordova.xml"/>
-    <import file="${basedir}/.sencha/app/build-cordova-cloud.xml"/>
-    <import file="${basedir}/.sencha/app/build-cordova-ios.xml"/>
-    <import file="${basedir}/.sencha/app/build-cordova-android.xml"/>
-    <import file="${basedir}/.sencha/app/build-cordova-bb10.xml"/>
-    <import file="${basedir}/.sencha/app/build-cordova.xml"/>
-    <import file="${basedir}/.sencha/app/build-cordova-cloud.xml"/>
-    <import file="${basedir}/.sencha/app/build-cordova-ios.xml"/>
-    <import file="${basedir}/.sencha/app/build-cordova-android.xml"/>
-    <import file="${basedir}/.sencha/app/build-cordova-bb10.xml"/>
 
     <!--
     The following targets can be provided to inject logic before and/or after key steps

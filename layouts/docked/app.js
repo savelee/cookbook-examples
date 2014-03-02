@@ -1,7 +1,6 @@
 Ext.onReady(function() {
 
     Ext.create('Ext.Panel', {
-        layout: 'fit',
         renderTo: Ext.getBody(),
         height: 220,
         margin: 10,
@@ -13,7 +12,7 @@ Ext.onReady(function() {
                 docked: 'top'
             },{
                 cls: 'box',
-                html: 'layout: fit '
+                html: ''
             }
         ]
     });
@@ -31,7 +30,7 @@ Ext.onReady(function() {
                 docked: 'left'
             },{
                 cls: 'box',
-                html: 'layout: fit '
+                html: ''
             }
         ]
     });
@@ -49,7 +48,7 @@ Ext.onReady(function() {
                 docked: 'right'
             },{
                 cls: 'box',
-                html: 'layout: fit '
+                html: ''
             }
         ]
     });
@@ -67,7 +66,7 @@ Ext.onReady(function() {
                 docked: 'bottom'
             },{
                 cls: 'box',
-                html: 'layout: fit '
+                html: ''
             }
         ]
     });

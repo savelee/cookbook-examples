@@ -22,6 +22,7 @@ Ext.define('FindACab.view.DetailView', {
                     align: 'right'
                 }]
             },
+
             {
                 xtype: 'map',
                 mapOptions: {
@@ -37,14 +38,14 @@ Ext.define('FindACab.view.DetailView', {
             }, {
                 padding: '20',
                 cls: 'taxitpl',
-                tpl: new Ext.XTemplate('<h1>{name}</h1>' +
+                tpl: Ext.create('Ext.XTemplate', '<h1>{name}</h1>' +
                     '<address>{address1}<br/>' +
                     '{zip} {city} {state_code} {country_code}' +
                     '</address>' +
                     '<a href="tel:{phone}" class="x-button callnow">' +
                     'Call now: {phone} </a><p>Distance: {distance}</p>'),
 
-                items: [{ 
+                items: [{
                     docked: 'right',
                     xtype: 'button',
                     action: 'close',

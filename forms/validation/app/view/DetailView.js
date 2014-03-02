@@ -38,7 +38,7 @@ Ext.define('FindACab.view.DetailView', {
             }, {
                 padding: '20',
                 cls: 'taxitpl',
-                tpl: new Ext.XTemplate('<h1>{name}</h1>' +
+                tpl: Ext.create('Ext.XTemplate', '<h1>{name}</h1>' +
                     '<address>{address1}<br/>' +
                     '{zip} {city} {state_code} {country_code}' +
                     '</address>' +

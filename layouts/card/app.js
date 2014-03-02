@@ -4,7 +4,8 @@ Ext.onReady(function() {
     stack = Ext.create('Ext.Panel', {
         layout: 'card',
         renderTo: Ext.getBody(),
-        height: 220,
+        height: 400,
+        width: 400,
         margin: 10,
         cls: 'background',
         items: [
@@ -26,7 +27,7 @@ Ext.onReady(function() {
             }
         ]
     });
-    stack.setActiveItem(1);
+    stack.setActiveItem(2);
 
     console.log('use stack.setActiveItem() in your console to switch cards.');
 });

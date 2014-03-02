@@ -42,7 +42,7 @@
 		width: 1.5em;
 		height: 1.5em;
 		margin: 0 auto;
-		-webkit-text-stroke-width: .5px;
+		-webkit-text-stroke-width: .35px;
 		-webkit-text-stroke-color: $ios7-blue;
 
 		.x-button-icon.x-hidden {
@@ -85,6 +85,7 @@ $tabbar-tab-radius: 4px;
 		.x-button-label {
 			color: $ios7-blue;
 			font-size: .8em;
+			line-height: 1;
 		}
 
 		&.x-tab-active {

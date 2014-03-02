@@ -20,7 +20,8 @@ Ext.define('FindACab.store.Cabs', {
 		        return record.get('name')[0].toUpperCase();
 		    }
 		},
-		groupDir: 'ASC',
+        //groupField: 'name',
+		//groupDir: 'DESC',
 
         //only display Taxi services that contain a phone number
         filters: [{

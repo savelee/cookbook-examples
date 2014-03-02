@@ -17,7 +17,8 @@ Ext.define('FindACab.store.Cabs', {
 		        return record.get('name')[0].toUpperCase();
 		    }
 		},
-		groupDir: 'ASC',
+        //groupField: 'name',
+		//groupDir: 'DESC',
 
         proxy: {
 	        type: 'jsonp',

@@ -1,8 +1,8 @@
 Ext.onReady(function() {
 
 	var data = { 
-	    name: 'Template',  
-	    description: 'This is an example of how to configure a basic template.' 
+	    name: 'Taxi Amsterdam',  
+	    description: 'The only taxi in Amsterdam that does not circle around.' 
 	};
 
     Ext.create('Ext.Component', {

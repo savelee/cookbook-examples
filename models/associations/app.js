@@ -99,10 +99,10 @@ Ext.application({
         yellowCabStore.add(bmw);
         yellowCabStore.sync();
 
-        console.log(yellowCabStore.getData(), taxiAmsterdamStore.getData());
-        //taxiAmsterdamStore.load(); //notice the filter request
-        //yellowCabStore.load(); //notice the filter request
-        
+console.log("TaxiAmsterdam has the following Cars:", taxiAmsterdamStore.getData());
+console.log("YellowCab has the following Cars:", yellowCabStore.getData());
+console.log("BelongsTo",taxiAmsterdam.cars().first().getTaxiService());
+       
     },
 
     onUpdated: function() {

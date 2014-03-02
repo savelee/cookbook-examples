@@ -2,18 +2,18 @@ Ext.application({
     requires: ['Ext.dataview.DataView', 'Ext.data.Store', 'Ext.Component'],
     launch: function() {
 
-        //create a data store with id: MyDataStore.
+        //create a data store with id: CabStore.
         Ext.create('Ext.data.Store', { 
-            id:'MyDataStore', 
+            id:'CabStore', 
             fields: ['name', 'description'],
             data : [
-                {name: "Test1", description: "Data from the store."},
-                {name: "Test2", description: "Data from the store."}
+                { name: "Taxi Amsterdam", description: "The best taxi service" + 
+                    "of Amsterdam."},
+                {   name: "Cab & Co", description: "Always fast."}
             ]
         });    
 
-        var myTpl = new Ext.XTemplate(
-            '<tpl for=".">',
+        var myTpl = Ext.create('Ext.XTemplate', '<tpl for=".">',
                 '<div class="row">',
                     '<h1>{name}</h1><p>{description}</p>',
                 '</div>',
@@ -22,7 +22,7 @@ Ext.application({
 
         Ext.create('Ext.DataView', {
             itemTpl: '<h1>{name}</h1><p>{description}</p>',
-            store: Ext.data.StoreManager.lookup('MyDataStore'),
+            store: 'CabStore',
             styleHtmlContent: true,
             cls: 'box',
             fullscreen: true,

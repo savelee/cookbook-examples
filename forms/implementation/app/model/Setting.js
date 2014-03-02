@@ -5,7 +5,7 @@ Ext.define('FindACab.model.Setting', {
         idProperty: 'id',
         identifier: 'uuid',
         fields: [
-            { name: 'id', type: 'int' },
+            { name: 'id', type: 'auto' },
             { name: 'gps', type: 'boolean' },
             { name: 'city', type: 'string' },
             { name: 'country', type: 'string' }

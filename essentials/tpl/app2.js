@@ -1,10 +1,11 @@
 var data = { 
-    name: 'Test',  
-    description: 'This is an example of how to update a template on runtime.' 
+    name: 'Taxi Amsterdam',  
+    description: 'The only taxi in Amsterdam that does not circle around.' 
 };
 
 var c = null;
 
+Ext.require('Ext.Component');
 Ext.onReady(function() {
 
     c = Ext.create('Ext.Component', {
@@ -15,7 +16,7 @@ Ext.onReady(function() {
         renderTo: Ext.getBody()
     });
 
-    data.name = "Test2";
+    data.description = "We like tourists a lot!";
 
     c.setData(data);
 });

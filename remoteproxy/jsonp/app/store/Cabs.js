@@ -4,14 +4,18 @@ Ext.define('FindACab.store.Cabs', {
     config: {
         model: 'FindACab.model.Cab',
         autoLoad: true,
-        proxy: {
+	  	proxy: {
 	        type: 'jsonp',
-	        url: "http://api.yelp.com/business_review_search?" +
-	        	"ywsid=ftPpQUCgfSA3yV98-uJn9g&term=Taxi&location=Amsterdam%20NL",
 	        noCache: false,
+	        url: Utils.Commons.YELP_API,
+	        extraParams: {
+            	term: Utils.Commons.YELP_TERM,
+            	ywsid: Utils.Commons.YELP_KEY,
+            	location: Utils.Commons.LOCATION
+            },
 	        reader: {
 	        	type: 'json',
-	        	rootProperty: 'businesses'
+	        	rootProperty: 'businesses',
 	        }
 	    },
     }

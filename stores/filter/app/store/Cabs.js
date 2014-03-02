@@ -13,11 +13,12 @@ Ext.define('FindACab.store.Cabs', {
 
         //group on the first character of Taxi name
         grouper: {
-		    groupFn: function(record) {
-		        return record.get('name')[0].toUpperCase();
-		    }
-		},
-		groupDir: 'ASC',
+            groupFn: function(record) {
+                return record.get('name')[0].toUpperCase();
+            }
+        },
+        //groupField: 'name',
+        //groupDir: 'DESC',
 
         //only display Taxi services that contain a phone number
         filters: [{

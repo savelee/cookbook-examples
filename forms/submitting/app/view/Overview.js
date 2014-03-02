@@ -20,14 +20,12 @@ Ext.define('FindACab.view.Overview', {
                 handler: function(){
                     this.fireEvent('filtername');
                 },
-                align: 'right',
                 ui: 'small',
                 text: 'name'
             },{
                 handler: function(){
                     this.fireEvent('filterdistance');
                 },
-                align: 'right',
                 ui: 'small',
                 text: 'distance'
             }],

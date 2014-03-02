@@ -1,43 +1,41 @@
 Ext.application({
     name: 'Events',
+    requires: ['BookTaxiBtn'],
 
     launch: function() {
 
-        var myEventHandler = function(b) {
-            alert('You used the ' + b.getText());
+        var callTaxiEventHandler = function(b) {
+            console.log('You tapped the ' + b.getText() + 'button');
         };
 
-        var button1 = Ext.create('Ext.Button', {
-            text: 'Handler',
+        var callTaxiBtn1 = Ext.create('Ext.Button', {
+            text: '1: Call a Taxi - handler',
             margin: 5,
-            handler: myEventHandler
+            handler: callTaxiEventHandler
         });
 
-        var button2 = Ext.create('Ext.Button', {
-            text: 'Listener',
+        var callTaxiBtn2 = Ext.create('Ext.Button', {
             margin: 5,
-            listeners: {
-                tap: myEventHandler
-            }
+            text: '2: Call a Taxi - addListener'
         });
+        callTaxiBtn2.addListener('tap', callTaxiEventHandler);
 
-        var button3 = Ext.create('Ext.Button', {
+        var callTaxiBtn3 = Ext.create('Ext.Button', {
             margin: 5,
-            text: 'on() method'
+            text: '3: Call a Taxi - on'
         });
-        button3.on('tap', myEventHandler);
+        callTaxiBtn3.on('tap', callTaxiEventHandler);
 
-        var button4 = Ext.create('Ext.Button', {
-            margin: 5,
-            text: 'addListener() method'
-        });
-        button4.addListener('tap', myEventHandler);
-
-        //just for testing purposes
+        //Display the buttons, for testing purposes
         Ext.create('Ext.Container', {
             fullscreen: true,
             padding: 10,
-            items: [button1, button2, button3, button4]
+            items: [
+                callTaxiBtn1, 
+                callTaxiBtn2, 
+                callTaxiBtn3, 
+                { xtype: 'booktaxibtn'}
+            ]
         });
 
     }

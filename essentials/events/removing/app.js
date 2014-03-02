@@ -3,17 +3,17 @@ Ext.application({
 
     launch: function() {
 
-        var myEventHandler = function(b) {
-            //button.un('tap', myEventHandler);
-            button.removeListener('tap', myEventHandler);
-            alert('You just removed the myEventHandler event, you can not invoke this again.');
+        var callTaxiEventHandler = function(b) {
+            console.log('You tapped the ' + b.getText() + 'button');
+            this.removeListener('tap', callTaxiEventHandler);
+            console.log('From now on, you can not call again.');
         };
 
-        var button = Ext.create('Ext.Button', {
-            text: 'Click me',
+        var callTaxi = Ext.create('Ext.Button', {
+            text: 'Call the Taxi',
             margin: 5,
             listeners: {
-                tap: myEventHandler
+                tap: callTaxiEventHandler
             }
         });
 
@@ -21,7 +21,7 @@ Ext.application({
         Ext.create('Ext.Container', {
             fullscreen: true,
             padding: 10,
-            items: [button]
+            items: [callTaxi]
         });
 
     }

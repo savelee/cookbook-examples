@@ -3175,22 +3175,29 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-grid .x-grid-column.x-column-sorted-asc .x-innerhtml:after, .x-grid .x-grid-column.x-column-sorted-desc .x-innerhtml:after {
   position: absolute;
   width: 12px;
-  right: -16px;
   line-height: 64px;
   top: 0;
   height: 64px;
   font-family: 'Pictos';
   font-size: 12px;
 }
-/* line 49, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 50, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+.x-grid .x-grid-column.x-column-align-left .x-innerhtml:after, .x-grid .x-grid-column.x-column-align-center .x-innerhtml:after {
+  right: -16px;
+}
+/* line 54, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+.x-grid .x-grid-column.x-column-align-right .x-innerhtml:after {
+  left: -16px;
+}
+/* line 58, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-column.x-column-sorted-asc .x-innerhtml:after {
   content: "{";
 }
-/* line 52, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 61, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-column.x-column-sorted-desc .x-innerhtml:after {
   content: "}";
 }
-/* line 57, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 66, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-headergroup {
   display: inline-block;
   position: relative;
@@ -3198,7 +3205,7 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 64px;
   padding-top: 32px;
 }
-/* line 64, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 73, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-headergroup .x-inner > .x-innerhtml {
   height: 32px;
   line-height: 28px;
@@ -3214,18 +3221,18 @@ input[type="search"]::-webkit-search-cancel-button {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 80, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 89, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-headergroup .x-grid-column {
   height: 32px !important;
   line-height: 27px !important;
   font-size: 0.7em;
 }
-/* line 87, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 96, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-headergroup .x-grid-column.x-column-sorted-asc .x-innerhtml:after, .x-grid .x-grid-headergroup .x-grid-column.x-column-sorted-desc .x-innerhtml:after {
   line-height: 27px;
   height: 27px;
 }
-/* line 95, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 104, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-row {
   position: absolute;
   left: 0;
@@ -3233,7 +3240,7 @@ input[type="search"]::-webkit-search-cancel-button {
   border-width: 0 0 1px 0;
   border-style: solid;
 }
-/* line 103, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 112, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-cell {
   display: inline-block;
   vertical-align: middle;
@@ -3243,26 +3250,26 @@ input[type="search"]::-webkit-search-cancel-button {
   overflow: hidden;
   border-width: 0 1px 0 0;
 }
-/* line 114, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 123, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-cell-align-center,
 .x-grid .x-grid-column-align-center {
   text-align: center;
 }
-/* line 119, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 128, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-cell-align-right,
 .x-grid .x-grid-column-align-right {
   text-align: right;
 }
-/* line 123, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 132, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions {
   border-width: 0 0 0 1px;
   border-style: solid;
 }
-/* line 127, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 136, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-list-item .x-innerhtml {
   padding: 0px !important;
 }
-/* line 131, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 140, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-header {
   height: 32px;
   line-height: 28px;
@@ -3272,7 +3279,7 @@ input[type="search"]::-webkit-search-cancel-button {
   overflow: hidden;
   padding-left: 10px;
 }
-/* line 144, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 153, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-sortablehandle,
 .x-grid .x-grid-viewoptions .x-column-options-visibleindicator,
 .x-grid .x-grid-viewoptions .x-column-options-folder,
@@ -3282,7 +3289,7 @@ input[type="search"]::-webkit-search-cancel-button {
   position: absolute;
   bottom: 0;
 }
-/* line 150, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 159, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-sortablehandle:after,
 .x-grid .x-grid-viewoptions .x-column-options-visibleindicator:after,
 .x-grid .x-grid-viewoptions .x-column-options-folder:after,
@@ -3299,49 +3306,49 @@ input[type="search"]::-webkit-search-cancel-button {
   content: "l";
   vertical-align: middle;
 }
-/* line 165, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 174, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-sortablehandle {
   left: 0;
 }
-/* line 167, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 176, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-sortablehandle:after {
   line-height: 54px;
 }
-/* line 171, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 180, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-visibleindicator {
   right: 0;
 }
-/* line 173, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 182, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-visibleindicator:after {
   font-size: 30px;
   line-height: 54px;
   content: "E";
 }
-/* line 181, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 190, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-folder,
 .x-grid .x-grid-viewoptions .x-column-options-leaf {
   width: 30px;
   left: 40px;
 }
-/* line 185, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 194, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-folder:after,
 .x-grid .x-grid-viewoptions .x-column-options-leaf:after {
   line-height: 52px;
   content: "o";
 }
-/* line 191, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 200, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-leaf:after {
   content: "F";
 }
-/* line 195, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 204, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-list-item.x-item-selected.x-list-item-tpl {
   background: transparent;
 }
-/* line 197, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 206, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-list-item.x-item-selected.x-list-item-tpl .x-innerhtml {
   background: transparent;
 }
-/* line 202, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 211, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-viewoptions .x-column-options-text {
   display: block;
   height: 30px;
@@ -3350,16 +3357,16 @@ input[type="search"]::-webkit-search-cancel-button {
   vertical-align: middle;
   line-height: 28px;
 }
-/* line 212, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 221, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-columnoptions {
   border-width: 0 0 1px;
 }
-/* line 216, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 225, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-multiselection-column {
   position: relative;
   padding: 0;
 }
-/* line 220, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 229, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-multiselection-column:after {
   position: absolute;
   top: 0;
@@ -3372,12 +3379,12 @@ input[type="search"]::-webkit-search-cancel-button {
   text-align: center;
   content: "2";
 }
-/* line 234, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 243, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-multiselection-cell {
   position: relative;
   padding: 0;
 }
-/* line 238, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 247, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-multiselection-cell:after {
   position: absolute;
   top: 0;
@@ -3390,20 +3397,20 @@ input[type="search"]::-webkit-search-cancel-button {
   text-align: center;
   content: "_";
 }
-/* line 252, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 261, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-item-selected .x-grid-multiselection-cell:after {
   content: "3";
 }
-/* line 257, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 266, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-pagingtoolbar > .x-body {
   padding: 0 30px 0 50px;
 }
-/* line 262, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 271, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-pagingtoolbar-currentpage {
   position: relative;
   height: 22px;
 }
-/* line 266, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 275, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-pagingtoolbar-currentpage span {
   position: absolute;
   right: 0;
@@ -3411,20 +3418,20 @@ input[type="search"]::-webkit-search-cancel-button {
   line-height: 22px;
   height: 22px;
 }
-/* line 275, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 284, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-summaryrow {
   height: 32px;
   font-size: 0.8em;
   position: relative;
 }
-/* line 280, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 289, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-summaryrow .x-grid-cell {
   height: 32px;
   line-height: 30px;
   border-width: 0 0 1px;
   border-style: solid;
 }
-/* line 288, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
+/* line 297, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/grid/_Grid.scss */
 .x-grid .x-grid-summaryrow .x-grid-multiselection-cell:after {
   content: '';
 }
@@ -3451,58 +3458,67 @@ input[type="search"]::-webkit-search-cancel-button {
   position: absolute;
   min-width: 100%;
   min-height: 100%;
-  width: auto !important;
   height: auto !important;
+  width: auto !important;
+  		/*
+  		&.x-scroll-scroller-vertical {
+  			height: auto !important;
+  		}
+  
+  		&.x-scroll-scroller-horizontal {
+  			width: auto !important;
+  		}
+  		*/
 }
 
-/* line 25, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 36, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-stretcher {
   position: absolute;
   visibility: hidden;
 }
 
-/* line 30, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 41, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid-wrapper {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-/* line 36, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 47, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid {
   display: table;
   width: 100%;
   height: 100%;
 }
-/* line 41, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 52, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid > * {
   display: table-row;
 }
-/* line 45, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 56, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid > * > * {
   display: table-cell;
 }
-/* line 49, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 60, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid > :first-child > :first-child {
   width: 100%;
   height: 100%;
 }
-/* line 54, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 65, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid > :first-child > :nth-child(2) {
   padding: 3px 3px 0 0;
 }
-/* line 58, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 69, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-grid > :nth-child(2) > :first-child {
   padding: 0 0 3px 3px;
 }
 
-/* line 63, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 74, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar {
   position: relative;
   overflow: hidden;
 }
 
-/* line 68, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 79, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-stretcher {
   position: absolute;
   visibility: hidden;
@@ -3510,77 +3526,77 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 100%;
 }
 
-/* line 75, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 86, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-x {
   width: 100%;
 }
-/* line 78, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 89, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-x > .x-scroll-bar-stretcher {
   width: 300%;
 }
-/* line 82, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 93, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-x.active {
   height: 6px;
 }
 
-/* line 87, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 98, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-y {
   height: 100%;
 }
-/* line 90, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 101, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-y > .x-scroll-bar-stretcher {
   height: 300%;
 }
-/* line 94, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 105, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-bar-y.active {
   width: 6px;
 }
 
-/* line 99, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 110, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator {
   background: #333;
   position: absolute;
   z-index: 3;
 }
 
-/* line 105, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 116, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator-x {
   height: 100%;
 }
 
-/* line 109, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 120, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator-y {
   width: 100%;
 }
 
-/* line 113, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 124, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded {
   background: none;
 }
-/* line 116, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 127, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded > * {
   position: absolute;
   background-color: #333;
 }
-/* line 121, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 132, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded > :nth-child(2) {
   -webkit-transform-origin: 0% 0%;
   background: none;
   content: url(data:image/bmp;base64,Qk08AAAAAAAAADYAAAAoAAAAAQAAAAEAAAABABAAAAAAAAYAAAASCwAAEgsAAAAAAAAAAAAAxhgAAAAA);
 }
-/* line 128, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 139, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-light > * {
   background-color: #eee;
 }
-/* line 132, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 143, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-light > :nth-child(2) {
   content: url(data:image/bmp;base64,Qk08AAAAAAAAADYAAAAoAAAAAQAAAAEAAAABABAAAAAAAAYAAAASCwAAEgsAAAAAAAAAAAAAvXcAAAAA);
 }
-/* line 138, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 149, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-y > * {
   width: 100%;
 }
-/* line 142, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 153, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-y > :first-child {
   height: 3px;
   -moz-border-radius-topleft: 3px;
@@ -3590,11 +3606,11 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
 }
-/* line 147, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 158, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-y > :nth-child(2) {
   height: 1px;
 }
-/* line 151, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 162, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-y > :last-child {
   height: 3px;
   -moz-border-radius-bottomleft: 3px;
@@ -3604,11 +3620,11 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-/* line 158, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 169, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-x > * {
   height: 100%;
 }
-/* line 162, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 173, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-x > :first-child {
   width: 3px;
   -moz-border-radius-topleft: 3px;
@@ -3618,11 +3634,11 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-/* line 167, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 178, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-x > :nth-child(2) {
   width: 1px;
 }
-/* line 171, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 182, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-scroll-indicator.rounded.x-scroll-indicator-x > :last-child {
   width: 3px;
   -moz-border-radius-topright: 3px;
@@ -3633,18 +3649,18 @@ input[type="search"]::-webkit-search-cancel-button {
   border-bottom-right-radius: 3px;
 }
 
-/* line 180, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 191, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-list-light .x-scroll-indicator,
 .x-dataview-light .x-scroll-indicator {
   background: #fff;
 }
 
-/* line 186, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 197, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-ios .x-scroll-scroller {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
-/* line 191, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
+/* line 202, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/base/src/scroller/_Scroller.scss */
 .x-ie .x-scroll-bar-y {
   position: absolute;
   margin-left: -5px;
@@ -3846,36 +3862,34 @@ input[type="search"]::-webkit-search-cancel-button {
   margin: 0px;
   max-width: 19em;
   border: 0px;
-  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
   background-image: -webkit-linear-gradient(top, #e7e8e8 1%, #d8ddde 25%, #e7e8e8 100%);
   background-image: -moz-linear-gradient(top, #e7e8e8 1%, #d8ddde 25%, #e7e8e8 100%);
   background-image: -o-linear-gradient(top, #e7e8e8 1%, #d8ddde 25%, #e7e8e8 100%);
   background-image: linear-gradient(top, #e7e8e8 1%, #d8ddde 25%, #e7e8e8 100%);
 }
-/* line 14, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 13, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-icon {
   margin: 0 0.8em 0 0.5em;
   background: #fff;
 }
-/* line 20, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 19, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-warning .x-button, .x-msgbox x-msgbox-error .x-button {
   border-color: #fc3e39;
 }
-/* line 22, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 21, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-warning .x-button .x-button-label, .x-msgbox .x-msgbox-warning .x-button .x-badge, .x-msgbox x-msgbox-error .x-button .x-button-label, .x-msgbox x-msgbox-error .x-button .x-badge {
   color: #fc3e39;
 }
-/* line 28, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 27, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-title {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 10px;
   margin-right: 10px;
 }
-/* line 33, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 32, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-title .x-title {
   font-size: 1.2em;
+  padding: 0px;
 }
 /* line 39, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-dock-body {
@@ -3894,10 +3908,10 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 /* line 56, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-field {
-  padding-top: 0px;
+  padding-top: .5em;
   min-height: .8em;
   margin: 0 0 0.6em 0;
-  background: #fff;
+  background: transparent;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -3907,9 +3921,8 @@ input[type="search"]::-webkit-search-cancel-button {
 /* line 64, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-field-input {
   padding-right: 2.2em;
-  border: 1px solid #cccccc;
 }
-/* line 69, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 68, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-form-field {
   min-height: .8em;
   padding: .3em;
@@ -3917,19 +3930,15 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   background: transparent;
 }
-/* line 77, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
-.x-msgbox .x-field-input {
-  padding-right: 2.2em;
-}
 
-/* line 82, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 77, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox-text {
   color: #000;
   font-size: .9em;
   font-weight: 400;
 }
 
-/* line 90, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 85, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -3937,19 +3946,19 @@ input[type="search"]::-webkit-search-cancel-button {
   -o-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 92, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 87, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-buttons {
   padding: 0;
   height: auto;
   min-height: auto;
 }
-/* line 97, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 92, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-buttons .x-toolbar-inner {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
 }
-/* line 100, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 95, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-buttons .x-toolbar-inner .x-button {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
@@ -3965,20 +3974,20 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 40px;
   margin: 0;
 }
-/* line 110, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 105, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-buttons .x-toolbar-inner .x-button:first-child {
   border-left-width: 0px;
 }
-/* line 114, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 109, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-buttons .x-toolbar-inner .x-button:last-child {
   border-left-width: 0px;
   border-right-width: 0px;
 }
-/* line 119, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 114, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-buttons .x-toolbar-inner .x-button.x-button-pressing {
   background-color: #fff;
 }
-/* line 123, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
+/* line 118, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_MessageBox.scss */
 .x-msgbox .x-msgbox-buttons .x-toolbar-inner .x-button .x-button-label, .x-msgbox .x-msgbox-buttons .x-toolbar-inner .x-button .x-badge {
   font-size: .9em;
   color: #157efb;
@@ -4053,13 +4062,18 @@ input[type="search"]::-webkit-search-cancel-button {
   line-height: 1.15em;
 }
 
-/* line 20, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 21, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+.x-button-pressing .x-button-icon {
+  color: #abd1fe;
+}
+
+/* line 26, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-label, .x-badge {
   font-weight: 400;
   font-family: "Helvetica Neue", Helvetica, Arial;
 }
 
-/* line 29, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 35, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-round,
 .x-button-decline-round,
 .x-button-confirm-round {
@@ -4070,14 +4084,14 @@ input[type="search"]::-webkit-search-cancel-button {
   border-radius: 1.8em;
 }
 
-/* line 35, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 41, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-small,
 .x-button-decline-small,
 .x-button-confirm-small {
   height: 1.4em;
   padding: 0 5px;
 }
-/* line 39, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 45, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-small .x-button-label, .x-button-small .x-badge,
 .x-button-decline-small .x-button-label,
 .x-button-decline-small .x-badge,
@@ -4086,14 +4100,14 @@ input[type="search"]::-webkit-search-cancel-button {
   font-size: 1em;
 }
 
-/* line 47, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 53, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-normal,
 .x-button-round,
 .x-button-small,
 .x-button-forward {
   border-color: #157efb;
 }
-/* line 50, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 56, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-normal .x-button-label, .x-button-normal .x-badge,
 .x-button-round .x-button-label,
 .x-button-round .x-badge,
@@ -4103,7 +4117,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-button-forward .x-badge {
   color: #157efb;
 }
-/* line 55, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 61, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-normal.x-button-pressing, .x-button-normal.x-button-pressed,
 .x-button-round.x-button-pressing,
 .x-button-round.x-button-pressed,
@@ -4113,7 +4127,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-button-forward.x-button-pressed {
   border-color: #abd1fe;
 }
-/* line 58, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 64, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-normal.x-button-pressing .x-button-label, .x-button-normal.x-button-pressing .x-badge, .x-button-normal.x-button-pressed .x-button-label, .x-button-normal.x-button-pressed .x-badge,
 .x-button-round.x-button-pressing .x-button-label,
 .x-button-round.x-button-pressing .x-badge,
@@ -4130,13 +4144,13 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #abd1fe;
 }
 
-/* line 66, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 72, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-decline,
 .x-button-decline-round,
 .x-button-decline-small {
   border-color: #fc3e39;
 }
-/* line 69, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 75, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-decline .x-button-label, .x-button-decline .x-badge,
 .x-button-decline-round .x-button-label,
 .x-button-decline-round .x-badge,
@@ -4144,7 +4158,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-button-decline-small .x-badge {
   color: #fc3e39;
 }
-/* line 74, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 80, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-decline.x-button-pressing, .x-button-decline.x-button-pressed,
 .x-button-decline-round.x-button-pressing,
 .x-button-decline-round.x-button-pressed,
@@ -4152,7 +4166,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-button-decline-small.x-button-pressed {
   border-color: #fed1d0;
 }
-/* line 77, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 83, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-decline.x-button-pressing .x-button-label, .x-button-decline.x-button-pressing .x-badge, .x-button-decline.x-button-pressed .x-button-label, .x-button-decline.x-button-pressed .x-badge,
 .x-button-decline-round.x-button-pressing .x-button-label,
 .x-button-decline-round.x-button-pressing .x-badge,
@@ -4165,13 +4179,13 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #fed1d0;
 }
 
-/* line 85, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 91, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-confirm,
 .x-button-confirm-round,
 .x-button-confirm-small {
   border-color: #53d769;
 }
-/* line 88, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 94, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-confirm .x-button-label, .x-button-confirm .x-badge,
 .x-button-confirm-round .x-button-label,
 .x-button-confirm-round .x-badge,
@@ -4179,7 +4193,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-button-confirm-small .x-badge {
   color: #53d769;
 }
-/* line 93, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 99, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-confirm.x-button-pressing, .x-button-confirm.x-button-pressed,
 .x-button-confirm-round.x-button-pressing,
 .x-button-confirm-round.x-button-pressed,
@@ -4187,7 +4201,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-button-confirm-small.x-button-pressed {
   border-color: #cff4d5;
 }
-/* line 96, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 102, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button-confirm.x-button-pressing .x-button-label, .x-button-confirm.x-button-pressing .x-badge, .x-button-confirm.x-button-pressed .x-button-label, .x-button-confirm.x-button-pressed .x-badge,
 .x-button-confirm-round.x-button-pressing .x-button-label,
 .x-button-confirm-round.x-button-pressing .x-badge,
@@ -4200,24 +4214,24 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #cff4d5;
 }
 
-/* line 105, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 111, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button.x-button-action, .x-button.x-button-action-round, .x-button.x-button-action-small {
   border-color: #157efb;
 }
-/* line 108, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 114, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button.x-button-action .x-button-label, .x-button.x-button-action .x-badge, .x-button.x-button-action-round .x-button-label, .x-button.x-button-action-round .x-badge, .x-button.x-button-action-small .x-button-label, .x-button.x-button-action-small .x-badge {
   color: #157efb;
 }
-/* line 112, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 118, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button.x-button-action.x-button-pressing, .x-button.x-button-action-round.x-button-pressing, .x-button.x-button-action-small.x-button-pressing {
   border-color: #abd1fe;
 }
-/* line 115, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 121, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button.x-button-action.x-button-pressing .x-button-label, .x-button.x-button-action.x-button-pressing .x-badge, .x-button.x-button-action-round.x-button-pressing .x-button-label, .x-button.x-button-action-round.x-button-pressing .x-badge, .x-button.x-button-action-small.x-button-pressing .x-button-label, .x-button.x-button-action-small.x-button-pressing .x-badge {
   color: #abd1fe;
 }
 
-/* line 122, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 128, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button.x-button-back {
   border: 0px;
   color: #157efb;
@@ -4225,7 +4239,7 @@ input[type="search"]::-webkit-search-cancel-button {
   margin: 0px;
   padding: 0px;
 }
-/* line 129, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 135, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button.x-button-back:before {
   content: '"';
   font-family: 'iOS7';
@@ -4236,22 +4250,22 @@ input[type="search"]::-webkit-search-cancel-button {
   line-height: 1.3em;
   padding-left: 0px;
 }
-/* line 140, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 146, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button.x-button-back .x-button-label, .x-button.x-button-back .x-badge {
   font-size: 1.1em;
   line-height: 1.3em;
   font-weight: 300;
   padding-left: 2px;
 }
-/* line 147, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 153, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button.x-button-back.x-button-pressing {
   color: #abd1fe;
 }
-/* line 150, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 156, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button.x-button-back.x-button-pressing:before {
   color: #abd1fe;
 }
-/* line 154, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 160, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-button.x-button-back.x-button-pressing .x-button-label, .x-button.x-button-back.x-button-pressing .x-badge {
   color: #abd1fe;
 }
@@ -4607,11 +4621,11 @@ input[type="search"]::-webkit-search-cancel-button {
   content: "g";
 }
 
-/* line 194, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 200, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-hasbadge {
   overflow: visible;
 }
-/* line 197, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
+/* line 203, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Button.scss */
 .x-hasbadge .x-badge {
   top: -5px;
   right: -6px;
@@ -4722,9 +4736,6 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-panel.x-floating,
 .x-form.x-floating {
   padding: 0;
-  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
@@ -4732,13 +4743,13 @@ input[type="search"]::-webkit-search-cancel-button {
   border-radius: 6px;
 }
 
-/* line 13, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Panel.scss */
+/* line 12, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Panel.scss */
 .x-panel.x-floating > .x-dock.x-sized,
 .x-form.x-floating > .x-dock.x-sized {
   margin: 0;
 }
 
-/* line 17, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Panel.scss */
+/* line 16, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Panel.scss */
 .x-toolbar.x-docked-top {
   -moz-border-radius-topleft: 6px;
   -webkit-border-top-left-radius: 6px;
@@ -4748,7 +4759,7 @@ input[type="search"]::-webkit-search-cancel-button {
   border-top-right-radius: 6px;
 }
 
-/* line 22, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Panel.scss */
+/* line 21, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Panel.scss */
 .x-container.x-floating > .x-dock > .x-toolbar.x-docked-bottom,
 .x-panel.x-floating > .x-dock > .x-toolbar.x-docked-bottom {
   -moz-border-radius-bottomleft: 6px;
@@ -4757,6 +4768,50 @@ input[type="search"]::-webkit-search-cancel-button {
   -moz-border-radius-bottomright: 6px;
   -webkit-border-bottom-right-radius: 6px;
   border-bottom-right-radius: 6px;
+}
+
+/* line 28, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Panel.scss */
+.x-webkit .x-anchor {
+  position: absolute;
+  overflow: hidden;
+}
+/* line 32, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Panel.scss */
+.x-webkit .x-anchor.x-anchor-top {
+  margin-top: -0.68em;
+  margin-left: -0.8155em;
+  width: 1.631em;
+  height: 0.7em;
+  -webkit-mask: 0 0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAPCAYAAABut3YUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPZJREFUeNpi/PX7LwOFwAyIG6HseiA+Ra5BjBQ6xg+IVwAxJ5T/HYgjgHgTOYYxUeCQUiBeh+QQBih7HVSOLiHDDMSTgTiTgLrpQJwLxH9p5RhOaLT4EakeFF3RQPyF2o6RhkaBGYkheRmIPYH4KbXSjC4QnyTDIch6danhGCcgPgwNGXKBNNQMb0ocEwXE24GYn4FyADJjI76Ej88x7UC8FIjZGKgHQDlxGtRsZmISMMjy+dBQoSXYBC0gv+NyDD80xzgx0AeAqg4fIH6NHk0qQHyMjg6B1WvHYDkNFjIgwS1ALMowMOAjEAeBHINe2Q0U+AUQYACQ10C2QNhRogAAAABJRU5ErkJggg==') no-repeat;
+  -webkit-mask-size: 1.631em 0.7em;
+  background-color: white;
+}
+/* line 42, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Panel.scss */
+.x-webkit .x-anchor.x-anchor-bottom {
+  margin-left: -0.8155em;
+  width: 1.631em;
+  height: 0.7em;
+  -webkit-mask: 0 0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAPCAYAAABut3YUAAAEJGlDQ1BJQ0MgUHJvZmlsZQAAOBGFVd9v21QUPolvUqQWPyBYR4eKxa9VU1u5GxqtxgZJk6XtShal6dgqJOQ6N4mpGwfb6baqT3uBNwb8AUDZAw9IPCENBmJ72fbAtElThyqqSUh76MQPISbtBVXhu3ZiJ1PEXPX6yznfOec7517bRD1fabWaGVWIlquunc8klZOnFpSeTYrSs9RLA9Sr6U4tkcvNEi7BFffO6+EdigjL7ZHu/k72I796i9zRiSJPwG4VHX0Z+AxRzNRrtksUvwf7+Gm3BtzzHPDTNgQCqwKXfZwSeNHHJz1OIT8JjtAq6xWtCLwGPLzYZi+3YV8DGMiT4VVuG7oiZpGzrZJhcs/hL49xtzH/Dy6bdfTsXYNY+5yluWO4D4neK/ZUvok/17X0HPBLsF+vuUlhfwX4j/rSfAJ4H1H0qZJ9dN7nR19frRTeBt4Fe9FwpwtN+2p1MXscGLHR9SXrmMgjONd1ZxKzpBeA71b4tNhj6JGoyFNp4GHgwUp9qplfmnFW5oTdy7NamcwCI49kv6fN5IAHgD+0rbyoBc3SOjczohbyS1drbq6pQdqumllRC/0ymTtej8gpbbuVwpQfyw66dqEZyxZKxtHpJn+tZnpnEdrYBbueF9qQn93S7HQGGHnYP7w6L+YGHNtd1FJitqPAR+hERCNOFi1i1alKO6RQnjKUxL1GNjwlMsiEhcPLYTEiT9ISbN15OY/jx4SMshe9LaJRpTvHr3C/ybFYP1PZAfwfYrPsMBtnE6SwN9ib7AhLwTrBDgUKcm06FSrTfSj187xPdVQWOk5Q8vxAfSiIUc7Z7xr6zY/+hpqwSyv0I0/QMTRb7RMgBxNodTfSPqdraz/sDjzKBrv4zu2+a2t0/HHzjd2Lbcc2sG7GtsL42K+xLfxtUgI7YHqKlqHK8HbCCXgjHT1cAdMlDetv4FnQ2lLasaOl6vmB0CMmwT/IPszSueHQqv6i/qluqF+oF9TfO2qEGTumJH0qfSv9KH0nfS/9TIp0Wboi/SRdlb6RLgU5u++9nyXYe69fYRPdil1o1WufNSdTTsp75BfllPy8/LI8G7AUuV8ek6fkvfDsCfbNDP0dvRh0CrNqTbV7LfEEGDQPJQadBtfGVMWEq3QWWdufk6ZSNsjG2PQjp3ZcnOWWing6noonSInvi0/Ex+IzAreevPhe+CawpgP1/pMTMDo64G0sTCXIM+KdOnFWRfQKdJvQzV1+Bt8OokmrdtY2yhVX2a+qrykJfMq4Ml3VR4cVzTQVz+UoNne4vcKLoyS+gyKO6EHe+75Fdt0Mbe5bRIf/wjvrVmhbqBN97RD1vxrahvBOfOYzoosH9bq94uejSOQGkVM6sN/7HelL4t10t9F4gPdVzydEOx83Gv+uNxo7XyL/FtFl8z9ZAHF4bBsrEwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAY9JREFUSA3FVbFKA0EQfbOXuzMgpLLyG2wVBEHSBSRFSvMNltZi5x9Y2kmqFKLY+QFpBStbK6uAJJe92xt3DkM2yV1yOYg5WG7nzcybx+wOS1GUtElRD+A6dvqRJmZGHMfHKbxnAh/sRg8NU0o7Sor7vj9Aqk4B+vh/MfQJVmd7tdpb1hlHQGMSmz4BTQfb5nagfe9iH/iWIllnnGrD0Pda1n50sO1sGU+B751PhUiRRTGCaRvUBdOdGFv5LHcQeB3LPXb5F4/J9UFrcwmiBztpwZyjskGGgavQV/d5FCvFSEKUJE3Fqm8FNfIIymM05JS7Yei9FOWsFSOJWuOIkb4S8WER0Sqcmb4IqhUEeF8Vl3dnluKFJDXqxDoGS861AGW564QITanOOPXq9h71QGg7WPFWJiawwwD8FAfNPKU6MwvHWKaAQbkX0ImDxPxNTCkhWa48B1VWFJvriTbJRCc8v0wiviqclYRMC8kjawWNZmLMSLCpf9P/pnfGPYlsL48ss7oVgyi9yd65pahywC+kjlEYVbHNjwAAAABJRU5ErkJggg==') no-repeat;
+  -webkit-mask-size: 1.631em 0.7em;
+  background-color: white;
+}
+/* line 51, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Panel.scss */
+.x-webkit .x-anchor.x-anchor-left {
+  margin-left: -0.6655em;
+  margin-top: -0.35em;
+  height: 1.631em;
+  width: 0.7em;
+  -webkit-mask: 0 0 url('data:image/png;base64,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') no-repeat;
+  -webkit-mask-size: 0.7em 1.631em;
+  background-color: white;
+}
+/* line 61, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Panel.scss */
+.x-webkit .x-anchor.x-anchor-right {
+  margin-top: -0.35em;
+  height: 1.631em;
+  width: 0.7em;
+  -webkit-mask: 0 0 url('data:image/png;base64,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') no-repeat;
+  -webkit-mask-size: 0.7em 1.631em;
+  background-color: white;
 }
 
 /* line 1, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/_Mask.scss */
@@ -4835,22 +4890,20 @@ input[type="search"]::-webkit-search-cancel-button {
 /* line 31, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
 .x-list .x-list-item.x-item-pressed {
   background-color: #d9d9d9;
-  border-top: 1px solid #d9d9d9;
 }
-/* line 36, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
+/* line 35, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
 .x-list .x-list-item.x-item-selected.x-list-item-tpl {
   background-color: #e6e6e6;
-  border-top: 1px solid #e6e6e6;
 }
-/* line 39, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
+/* line 37, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
 .x-list .x-list-item.x-item-selected.x-list-item-tpl .x-list-disclosure {
   background-color: transparent;
 }
-/* line 45, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
+/* line 43, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
 .x-list .x-list-item .x-list-item-body, .x-list .x-list-item.x-list-item-tpl .x-innerhtml {
   padding: 0.7em 1em;
 }
-/* line 49, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
+/* line 47, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
 .x-list .x-list-item.x-list-item-tpl:before {
   content: '';
   display: block;
@@ -4860,35 +4913,18 @@ input[type="search"]::-webkit-search-cancel-button {
   right: 0px;
   border-bottom: solid 1px #dbdbe0;
 }
-/* line 59, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
+/* line 57, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
 .x-list .x-list-item.x-item-pressed.x-list-item-tpl:before, .x-list .x-list-item.x-item-selected.x-list-item-tpl:before, .x-list .x-list-item.x-list-footer-wrap.x-list-item-tpl:before {
   border-bottom: solid 1px transparent;
 }
+
 /* line 63, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
-.x-list .x-list-item.x-list-header-wrap.x-list-item-tpl {
-  border-top: solid 1px #dbdbe0;
-}
-/* line 67, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
-.x-list .x-list-item.x-list-footer-wrap.x-list-item-tpl {
-  border-bottom: solid 1px #dbdbe0;
-}
-
-/* line 74, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
-.x-list-grouped .x-list-item.x-list-header-wrap.x-list-item-tpl {
-  border-top: solid 1px transparent;
-}
-/* line 78, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
-.x-list-grouped .x-list-item.x-list-footer-wrap.x-list-item-tpl {
-  border-bottom: solid 1px transparent;
-}
-
-/* line 83, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
 .x-list .x-list-header {
   background-color: #f7f7f7;
   border: 0px;
   padding: 0em 1em;
 }
-/* line 87, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
+/* line 67, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/dataview/_List.scss */
 .x-list .x-list-header .x-innerhtml {
   font-size: 1.2em;
   font-weight: 600;
@@ -4912,6 +4948,12 @@ input[type="search"]::-webkit-search-cancel-button {
   border-bottom: 0;
 }
 
+/* line 17, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+.x-field-input {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
 /* line 18, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-field-input .x-clear-icon {
   background: url('data:image/png;base64,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') no-repeat;
@@ -4924,12 +4966,12 @@ input[type="search"]::-webkit-search-cancel-button {
   right: -.5em;
 }
 
-/* line 31, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 35, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-field-clearable .x-field-input {
   padding-right: 2.2em;
 }
 
-/* line 36, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 40, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-input-el {
   background: transparent;
   padding: 0.7em 0.4em 0.4em 0.4em;
@@ -4938,12 +4980,12 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
-/* line 44, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 48, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-ie .x-input-el {
   background: transparent;
 }
 
-/* line 55, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 59, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-item-disabled .x-form-label,
 .x-item-disabled input,
 .x-item-disabled .x-input-el,
@@ -4955,41 +4997,40 @@ input[type="search"]::-webkit-search-cancel-button {
   pointer-events: none;
 }
 
-/* line 61, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 65, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-item-disabled .x-form-label {
   color: #aaa;
 }
 
-/* line 65, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 69, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-item-disabled .x-form-label:after {
   color: #666666 !important;
 }
 
-/* line 70, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 74, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-toolbar .x-field {
   background: transparent;
 }
-/* line 73, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 77, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-toolbar .x-field .x-component-outer {
   padding: 0.4em 0.6em 0;
 }
-/* line 77, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 81, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-toolbar .x-field .x-input-el {
   padding: 0.3em 0.6em;
   min-height: 1.4em;
   background: transparent;
-  border: 1px solid #cccccc;
 }
-/* line 85, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 88, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-toolbar .x-field-input {
   position: relative;
   background: #fff;
 }
-/* line 90, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 93, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-toolbar .x-field-clearable .x-field-input {
   padding-right: 0;
 }
-/* line 94, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
+/* line 97, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Field.scss */
 .x-toolbar .x-clear-icon {
   position: absolute;
   top: .9em;
@@ -5054,6 +5095,15 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* line 2, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
+.x-desktop.x-windows.x-chrome .x-spinner .x-spinner-button-down {
+  line-height: .7em;
+}
+/* line 6, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
+.x-desktop.x-windows.x-chrome .x-spinner .x-spinner-button-up {
+  line-height: .85em;
+}
+
+/* line 12, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
 .x-spinner .x-spinner-button {
   margin-top: .25em;
   margin-bottom: .25em;
@@ -5072,29 +5122,29 @@ input[type="search"]::-webkit-search-cancel-button {
   font-size: 1.8em;
   line-height: .56em;
 }
-/* line 9, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
+/* line 19, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
 .x-spinner .x-spinner-button.x-spinner-button-down {
   background-color: #fc3e39;
 }
-/* line 13, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
+/* line 23, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
 .x-spinner .x-spinner-button.x-spinner-button-up {
   background-color: #53d769;
 }
-/* line 27, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
+/* line 37, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
 .x-spinner .x-input-el {
   color: black;
   -webkit-text-fill-color: black;
 }
-/* line 33, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
+/* line 43, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
 .x-spinner.x-item-disabled .x-input-el {
   color: #B3B3B3;
   -webkit-text-fill-color: #B3B3B3;
 }
-/* line 39, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
+/* line 49, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
 .x-spinner.x-item-disabled .x-spinner-button.x-spinner-button-down {
   background-color: #fea09d;
 }
-/* line 43, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
+/* line 53, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/field/_Spinner.scss */
 .x-spinner.x-item-disabled .x-spinner-button.x-spinner-button-up {
   background-color: #a6eab1;
 }
@@ -5147,18 +5197,27 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-form .x-field .x-input-el {
   font-weight: 300;
 }
-
 /* line 20, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_Panel.scss */
+.x-form.x-floating .x-input-el {
+  padding-top: .5em;
+}
+/* line 25, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_Panel.scss */
+.x-form .x-field .x-field-input {
+  border: 0px;
+  background-color: transparent;
+}
+
+/* line 31, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_Panel.scss */
 .x-form-label {
   padding: 0.6em 0.6em 0.6em 1em;
 }
-/* line 23, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_Panel.scss */
+/* line 34, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_Panel.scss */
 .x-form-label span {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 400;
 }
 
-/* line 29, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_Panel.scss */
+/* line 40, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_Panel.scss */
 .x-form-fieldset .x-form-fieldset-inner {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
@@ -5193,20 +5252,25 @@ input[type="search"]::-webkit-search-cancel-button {
   content: '';
   display: block;
   position: absolute;
-  bottom: -1px;
+  bottom: 0px;
   left: 1em;
   right: 0px;
   border-bottom: solid 1px #dbdbe0;
 }
+/* line 31, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_FieldSet.scss */
+.x-form-fieldset .x-field:last-child:before {
+  border-bottom: solid 1px transparent;
+}
 
-/* line 32, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_FieldSet.scss */
+/* line 40, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_FieldSet.scss */
 .x-form-fieldset-title {
   margin: 2em 0.5em 0.5em 1em;
   color: #555555;
   font-weight: 400;
+  font-size: .9em;
 }
 
-/* line 38, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_FieldSet.scss */
+/* line 47, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/form/_FieldSet.scss */
 .x-form-fieldset-instructions {
   color: #555555;
   margin: 1em;
@@ -5270,6 +5334,42 @@ input[type="search"]::-webkit-search-cancel-button {
 /* line 50, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/picker/_Picker.scss */
 .x-picker-slot .x-dataview-item.x-item-selected {
   color: #000;
+}
+
+/**
+ * @class Ext.plugin.PullRefresh
+ */
+/* line 5, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/plugin/_PullRefresh.scss */
+.x-list-pullrefresh-arrow {
+  background: center center url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAA8CAYAAAAUufjgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAjFJREFUeNrsmU8oREEYwOexdtNuKBfFwdVhCyfuysnFiXISS+1BLopyUpKLXETkRLaUi1LK3Q2lpPbiQLnIn03a/Hm+z86Ttv0zM++bfbOar36Hbad5v535Zp7v47iuy0wOpyoEHccRHV9L9NxPkUE/bhKCOKiOSPAdn69DsJ5I8E2HYA0QJRJ8Bb50CDYRCT7pEMQD0kwk+CByUFQEW4gE73UIhoA2IsFb4ENEMCQ5MdU1IxwygpT3oKNLMGyyYFVscdhusc8tDpu+xRG7xf95BW0O2kNiV1AgIvaQ2BzUJNgJNJYZGyUU7OG1cal4Bi68oqkDPszy2teEwJp5Cdyu/lZ1g8CwIYJ7wEF+2YmrNw90Byx3BizgKhaqizEP1wg7CLLxCEzy/CtauMeBlQDyEfNuGrgU6SyM8F9SyVgHdmRaH6tAb4XkToEp2d4M5mOK0TWMigU2koa8vJMRZPxEb2ss2LEVPMpPLlMRxBgDZjQJLgNbxb6Uab9tAn3EcifAeKkBMoLY+j0GWonk7oB+lmsFkwhidAGHBPmIeTcAnJcbKCuIMQEs+hScAzZEBqoIYuzyFVCJI36lMJ2CDfxibZeUu+EX/4uMIFP8ZyLejxkgK0hG5a8kP4IYSZbr1IuQVHmAX0HGX4VuGfZVJ6cQxPd1uoRcWqDW0SroFVzZAnJZ/h0LWhAjUUAw4XdSSsH8fExRTEgtGAOuOTETBb16Jk412e+bxOSwglYw6PgWYABvLk8P7zGJFwAAAABJRU5ErkJggg==') no-repeat;
+  background-size: 2em 3em;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 200ms;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+/* line 13, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/plugin/_PullRefresh.scss */
+.x-android-2 .x-list-pullrefresh-arrow {
+  -webkit-transition-property: none;
+  -webkit-transition-duration: 0;
+}
+
+/* line 18, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/plugin/_PullRefresh.scss */
+.x-list-pullrefresh-release .x-list-pullrefresh-arrow {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+/* line 22, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/plugin/_PullRefresh.scss */
+.x-list-pullrefresh-message {
+  margin-bottom: 0.1em;
 }
 
 /**
@@ -5444,7 +5544,7 @@ input[type="search"]::-webkit-search-cancel-button {
   width: 1.5em;
   height: 1.5em;
   margin: 0 auto;
-  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-width: .35px;
   -webkit-text-stroke-color: #157efb;
 }
 /* line 48, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
@@ -5495,30 +5595,31 @@ input[type="search"]::-webkit-search-cancel-button {
 .x-tabbar.x-docked-top .x-tab .x-button-label, .x-tabbar.x-docked-top .x-tab .x-badge {
   color: #157efb;
   font-size: .8em;
+  line-height: 1;
 }
-/* line 90, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
+/* line 91, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab.x-tab-active {
   background-color: #157efb;
 }
-/* line 92, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
+/* line 93, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab.x-tab-active .x-button-label, .x-tabbar.x-docked-top .x-tab.x-tab-active .x-badge {
   color: #fff;
 }
-/* line 97, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
+/* line 98, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab .x-button-icon::before {
   display: none;
 }
-/* line 101, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
+/* line 102, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab:first-child {
   border-radius: 4px 0px 0px 4px;
   border-right: 0;
 }
-/* line 106, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
+/* line 107, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab:last-child {
   border-radius: 0px 4px 4px 0px;
   border-left: 0;
 }
-/* line 111, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
+/* line 112, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/cupertino/src/tab/_Panel.scss */
 .x-tabbar.x-docked-top .x-tab .x-button-icon.x-hidden {
   display: none !important;
 }

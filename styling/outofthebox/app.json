@@ -70,13 +70,7 @@
      *
      *      }
      */
-    "css": [
-        {
-            "path": "../../touch/resources/css/base.css",
-            "platform": ["base"],
-            "update": "delta"
-        },
-        {
+    "css": [{
             "path": "../../touch/resources/css/sencha-touch.css",
             "platform": ["desktop", "firefox", "tizen"],
             "theme": "Default",

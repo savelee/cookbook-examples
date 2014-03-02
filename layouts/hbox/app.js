@@ -16,13 +16,14 @@ Ext.onReady(function() {
             },
             {
                 cls: 'box',
-                html: 'flex: 2',
+                width: 150,
+                html: 'width: 150',
                 margin: 10
             },
             {
-                cls: 'box2',
-                flex: 1,
-                html: 'flex: 1',
+                cls: 'box',
+                width: 150,
+                html: 'width: 150',
                 margin: 10
             }
         ]
@@ -50,7 +51,7 @@ Ext.onReady(function() {
                 margin: 10
             },
             {
-                cls: 'box2',
+                cls: 'box',
                 width: 150,
                 html: 'width: 150',
                 margin: 10
@@ -80,7 +81,7 @@ Ext.onReady(function() {
                 margin: 10
             },
             {
-                cls: 'box2',
+                cls: 'box',
                 width: 150,
                 html: 'width: 150',
                 margin: 10
@@ -110,7 +111,7 @@ Ext.onReady(function() {
                 margin: 10
             },
             {
-                cls: 'box2',
+                cls: 'box',
                 width: 150,
                 html: 'width: 150',
                 margin: 10
@@ -122,7 +123,8 @@ Ext.onReady(function() {
         renderTo: Ext.getBody(),
         layout: {
             type: 'hbox',
-            align: 'stretch'
+            align: 'stretch',
+            pack: 'start'
         },
         height: 300,
         cls: 'background',
@@ -134,16 +136,84 @@ Ext.onReady(function() {
             },
             {
                 cls: 'box',
-                flex: 1,
-                html: 'flex: 1',
+                width: 150,
+                html: 'width: 150',
                 margin: 10
             },
             {
-                cls: 'box2',
+                cls: 'box',
+                width: 150,
+                html: 'width: 150',
+                margin: 10
+            }
+        ]
+    });
+
+    Ext.create('Ext.Panel', {
+        renderTo: Ext.getBody(),
+        layout: {
+            type: 'hbox',
+            align: 'start',
+            pack: 'start'
+        },
+        height: 300,
+        cls: 'background',
+        margin: 10,
+        items: [
+            {
+              docked: 'top',
+              cls: 'title'
+            },
+            {
+                cls: 'box',
+                flex: 2,
+                html: 'flex: 2',
+                margin: 10
+            },
+            {
+                cls: 'box',
                 flex: 1,
                 html: 'flex: 1',
                 margin: 10
             }
         ]
     });
+
+
+    Ext.create('Ext.Panel', {
+        renderTo: Ext.getBody(),
+        layout: {
+            type: 'hbox',
+            align: 'start',
+            pack: 'start'
+        },
+        height: 300,
+        cls: 'background',
+        margin: 10,
+        items: [
+            {
+              docked: 'top',
+              cls: 'title'
+            },
+            {
+                cls: 'box',
+                flex: 2,
+                html: 'flex: 2',
+                margin: 10
+            },
+            {
+                cls: 'box',
+                flex: 1,
+                html: 'flex: 1',
+                margin: 10
+            },
+            {
+                cls: 'box',
+                width: 100,
+                html: 'width: 100',
+                margin: 10
+            }     
+        ]
+    });
+
 });

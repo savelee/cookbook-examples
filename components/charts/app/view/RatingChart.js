@@ -1,14 +1,14 @@
 Ext.define('FindACab.view.RatingChart', {
-	extend: 'Ext.chart.SpaceFillingChart', //<1>
+	extend: 'Ext.chart.SpaceFillingChart',
 	xtype: 'ratingchart',
-	requires: [ //<2>
+	requires: [
 		'Ext.chart.series.Gauge',
 		'Ext.chart.series.sprite.PieSlice',
 	],
 	config: {
 		series: [{
-			type: 'gauge', //<3>
-			field: 'avg_rating', //<4>
+			type: 'gauge',
+			field: 'avg_rating',
 			labelField: 'Rating',
 			value: 0,
 			minimum: 0,

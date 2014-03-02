@@ -57,8 +57,6 @@ Ext.application({
     },
 
     launch: function() {
-        Utils.Commons.initSenchaMods();
-
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 

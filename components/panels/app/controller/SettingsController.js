@@ -1,14 +1,14 @@
 Ext.define('FindACab.controller.SettingsController', {
     extend: 'Ext.app.Controller',
-    requires: ['FindACab.view.SettingsView'], //<1>
+    requires: ['FindACab.view.SettingsView'],
     config: {
         models:['Setting'],
         stores: ['Settings'],
 
-        refs: { //<2>
+        refs: { 
             'settingsView': 'settingsview'
         },
-        control: { //<3>
+        control: { 
             'detailview #settingsbtn': {
                 tap: 'toggleSettings'
             },
@@ -20,21 +20,21 @@ Ext.define('FindACab.controller.SettingsController', {
 
     init: function(){
 
-        if (!this.overlay) { //<4>
-            this.overlay = Ext.Viewport.add({ //<5>
+        if (!this.overlay) {
+            this.overlay = Ext.Viewport.add({
                 xtype: 'settingsview',
                 modal: true,
                 hideOnMaskTap: true,
                 centered: true,
                 width: '50%',
                 height: 350,
-                hidden: true, //6>
-                showAnimation: { //<7>
+                hidden: true,
+                showAnimation: {
                     type: 'popIn',
                     duration: 250,
                     easing: 'ease-out'
                 },
-                hideAnimation: { //<8>
+                hideAnimation: {
                     type: 'popOut',
                     duration: 250,
                     easing: 'ease-out'
@@ -43,7 +43,7 @@ Ext.define('FindACab.controller.SettingsController', {
         }      
     },
 
-    toggleSettings: function(){ //<9>
+    toggleSettings: function(){
         if(this.getSettingsView().getHidden()) {
             this.getSettingsView().show();
         } else {

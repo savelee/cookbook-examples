@@ -4,11 +4,11 @@ Ext.define('FindACab.view.DetailView', {
     requires: [
         'Ext.TitleBar',
         'Ext.Button',
-        'Ext.layout.Card', //<1>
-        'Ext.Map' //<2>
+        'Ext.layout.Card',
+        'Ext.Map'
     ],
     config: {
-        layout: 'card', //<3>
+        layout: 'card', 
         items: [{
                 xtype: 'titlebar',
                 ui: 'light',
@@ -23,8 +23,8 @@ Ext.define('FindACab.view.DetailView', {
             },
 
             {
-                xtype: 'map', //<4>
-                mapOptions: { //<5>
+                xtype: 'map',
+                mapOptions: {
                     overviewMapControl: false,
                     panControl: false,
                     rotateControl: false,
@@ -34,17 +34,17 @@ Ext.define('FindACab.view.DetailView', {
                     mapTypeId : google.maps.MapTypeId.ROADMAP
                 },
                 useCurrentLocation: false
-            }, { //<6>
+            }, { 
                 padding: '20',
                 cls: 'taxitpl',
-                tpl: new Ext.XTemplate('<h1>{name}</h1>' +
+                tpl: Ext.create('Ext.XTemplate','<h1>{name}</h1>' +
                     '<address>{address1}<br/>' +
                     '{zip} {city} {state_code} {country_code}' +
                     '</address>' +
                     '<a href="tel:{phone}" class="x-button callnow">' +
                     'Call now: {phone} </a><p>Distance: {distance}</p>'),
 
-                items: [{ //<7>
+                items: [{
                     docked: 'right',
                     xtype: 'button',
                     action: 'close',

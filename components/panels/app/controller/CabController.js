@@ -85,33 +85,30 @@ Ext.define('FindACab.controller.CabController', {
 
         } else {
             var store = Ext.getStore('Cabs');
-            store.removeAll();
-            store.supersync(function() {
-
-                /* switch my client proxy to a server proxy */
-                store.setProxy({
-                    type: 'jsonp',
-                    url: Utils.Commons.YELP_API,
-                    //type: "ajax",
-                    //url : "data/data.json",
-                    //noCache: false,
-                    extraParams: {
-                        term: Utils.Commons.YELP_TERM,
-                        ywsid: Utils.Commons.YELP_KEY,
-                        location: location
-                    },
-                    reader: {
-                        type: 'json',
-                        rootProperty: 'businesses',
-                    }
-                });
-
-                /* and download the data, on the success callback
-                 * I will run the syncRecords() controller function */
-                Ext.getStore('Cabs').load(function(records) {
-                    me.syncRecords(records, location);
-                });
+            /* switch my client proxy to a server proxy */
+            store.setProxy({
+                type: 'jsonp',
+                url: Utils.Commons.YELP_API,
+                //type: "ajax",
+                //url : "data/data.json",
+                //noCache: false,
+                extraParams: {
+                    term: Utils.Commons.YELP_TERM,
+                    ywsid: Utils.Commons.YELP_KEY,
+                    location: location
+                },
+                reader: {
+                    type: 'json',
+                    rootProperty: 'businesses',
+                }
             });
+
+            /* and download the data, on the success callback
+             * I will run the syncRecords() controller function */
+            store.load(function(records) {
+                me.syncRecords(records, location);
+            });
+          
         }
     },
 
@@ -120,10 +117,11 @@ Ext.define('FindACab.controller.CabController', {
          * Loop through all the items that are downloaded
          * and add these to the items array.
          */
-        var items = [];
-        var me = this;
-        var total = records.length;
-        var i = 0;
+      var items = [],
+            me = this,
+            total = records.length,
+            i = 0,
+            store = Ext.getStore('Cabs');
 
         for(i;i<total;i++) {
             var item = records[i];
@@ -148,24 +146,35 @@ Ext.define('FindACab.controller.CabController', {
          * Switch the Cabs Store proxy back to the
          * SQL local proxy
          */
-        Ext.getStore('Cabs').setProxy({
+        store.setProxy({
             type: 'sql',
             database: "FindACab",
             table: 'Cabs'
         });
-
-        /* 
-         * Add the items array to the Cabs Store
-         * and sync() the store to start saving the
-         * records locally.
-         * When it is done, we can remove the Loading mask.
+        
+        /*
+         * remove current items from the database.
+         * and sync this first.
          */
-        Ext.getStore('Cabs').removeAll();
-        Ext.getStore('Cabs').add(items);
-        Ext.getStore('Cabs').supersync(function(recs) {
-            me.loadMarkers(Ext.ComponentQuery.query('map')[0]);
-            me.setTitleCount(recs.getCount());
-            Ext.Viewport.unmask();
+        store.removeAll();
+        store.sync({
+            success: function(batch){
+                /* 
+                 * Add the downloaded items array to the Cabs Store
+                 * and sync() the store to start saving the
+                 * records locally.
+                 * When it is done, we can remove the Loading mask.
+                 */
+                store.add(items);
+                store.sync({
+                    success: function(batch){
+                        me.loadMarkers(Ext.ComponentQuery.query('map')[0]);
+                        me.setTitleCount(store.getCount());
+                        store.load();
+                        Ext.Viewport.unmask();
+                    }
+                });
+            }
         });
 
     },

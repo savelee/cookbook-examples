@@ -1,3 +1,4 @@
+// BEGIN OFFLINESTORAGE-CAB-CONTROLLER-1
 Ext.define('FindACab.controller.CabController', {
     extend: 'Ext.app.Controller',
 
@@ -6,7 +7,11 @@ Ext.define('FindACab.controller.CabController', {
         stores: ['Cabs']
     },
 
-    launch: function() { 
+// END OFFLINESTORAGE-CAB-CONTROLLER-1 
+
+// BEGIN OFFLINESTORAGE-CAB-CONTROLLER-2
+
+    launch: function() {
         Ext.Viewport.setMasked({
             xtype: 'loadmask',
             indicator: true,
@@ -16,9 +21,12 @@ Ext.define('FindACab.controller.CabController', {
         this.loadLocal();
     },
 
+// END OFFLINESTORAGE-CAB-CONTROLLER-2
+
+// BEGIN OFFLINESTORAGE-CAB-CONTROLLER-3
     loadLocal: function() {
         var me = this;
-        Ext.getStore('Cabs').load(function() {
+        Ext.getStore('Cabs').load(function(item) {
             var count = Ext.getStore('Cabs').getCount();
             if (count < 1) {
                 me.downloadData();
@@ -27,13 +35,16 @@ Ext.define('FindACab.controller.CabController', {
             }
         });
     },
+// END OFFLINESTORAGE-CAB-CONTROLLER-3
 
-    downloadData: function(location) {
+// BEGIN OFFLINESTORAGE-CAB-CONTROLLER-4
+    downloadData: function(location) { 
         var me = this;
-
-        //hardcode location to make sure the script won't fail
         location = Utils.Commons.LOCATION;
 
+// END OFFLINESTORAGE-CAB-CONTROLLER-4
+
+// BEGIN OFFLINESTORAGE-CAB-CONTROLLER-5
         if (!location) {
             Ext.getStore('Settings').load(function() {
                 try {
@@ -48,55 +59,63 @@ Ext.define('FindACab.controller.CabController', {
                         "Please prefill your location, to detect nearby Taxiservices.",
                         function(buttonId) {
                             if (buttonId === 'yes') {
-                                me.getApplication().getController('SettingsController').toggleSettings();
+            
+            me.getApplication().getController('SettingsController').toggleSettings();
+                            
                             }
                         }
                     );
                 }
             });
 
-        } else {
-            var store = Ext.getStore('Cabs');
-            store.removeAll();
-            store.supersync(function() {
+        } 
 
-                /* switch my client proxy to a server proxy */
-                store.setProxy({
-                    type: 'jsonp',
-                    url: Utils.Commons.YELP_API,
-                    //type: "ajax",
-                    //url : "data/data.json",
-                    //noCache: false,
-                    extraParams: {
-                        term: Utils.Commons.YELP_TERM,
-                        ywsid: Utils.Commons.YELP_KEY,
-                        location: location
-                    },
-                    reader: {
-                        type: 'json',
-                        rootProperty: 'businesses',
-                    }
-                });
+// END OFFLINESTORAGE-CAB-CONTROLLER-5
 
+// BEGIN OFFLINESTORAGE-CAB-CONTROLLER-6
 
-                /* and download the data, on the success callback
-                 * I will run the syncRecords() controller function */
-                Ext.getStore('Cabs').load(function() {
-                    me.syncRecords();
-                });
+        else {
+            //<1>
+            var store = Ext.getStore('Cabs'); 
+            store.setProxy({
+                type: 'jsonp',
+                url: Utils.Commons.YELP_API,
+                extraParams: {
+                    term: Utils.Commons.YELP_TERM,
+                    ywsid: Utils.Commons.YELP_KEY,
+                    location: location
+                },
+                //<2>
+                reader: {
+                    type: 'json',
+                    rootProperty: 'businesses',
+                }
             });
-        }
-    },
 
-    syncRecords: function(records, success, operation) {
+            //<3>
+            store.load(function(records) {
+                me.syncRecords(records, location);
+            });
+            
+        }
+    }, //end downloadData
+
+// END OFFLINESTORAGE-CAB-CONTROLLER-6
+
+// BEGIN OFFLINESTORAGE-CAB-CONTROLLER-7
+    syncRecords: function(records, userinput) {
         /* 
          * Loop through all the items that are downloaded
          * and add these to the items array.
          */
-        var items = [];
-        var me = this;
+      var items = [],
+            me = this,
+            total = records.length,
+            i = 0,
+            store = Ext.getStore('Cabs');
 
-        Ext.getStore('Cabs').each(function(item, index, length) {
+        for(i;i<total;i++) {
+            var item = records[i];
             items.push({
                 'name': item.get('name'),
                 'latitude': item.get('latitude'),
@@ -109,31 +128,47 @@ Ext.define('FindACab.controller.CabController', {
                 'country_code': item.get('country_code'),
                 'avg_rating': item.get('avg_rating'),
                 'distance': item.get('distance'),
+                'userinput': userinput
             });
 
-        });
+        };
 
-        /* 
-         * Switch the Cabs Store proxy back to the
-         * SQL local proxy
-         */
-        Ext.getStore('Cabs').setProxy({
+// END OFFLINESTORAGE-CAB-CONTROLLER-7
+
+// BEGIN OFFLINESTORAGE-CAB-CONTROLLER-8
+        store.setProxy({
             type: 'sql',
             database: "FindACab",
             table: 'Cabs'
         });
 
-        /* 
-         * Add the items array to the Cabs Store
-         * and sync() the store to start saving the
-         * records locally.
-         * When it is done, we can remove the Loading mask.
+// END OFFLINESTORAGE-CAB-CONTROLLER-8
+
+// BEGIN OFFLINESTORAGE-CAB-CONTROLLER-9
+        /*
+         * remove current items from the database.
+         * and sync this first.
          */
-        Ext.getStore('Cabs').removeAll();
-        Ext.getStore('Cabs').add(items);
-        Ext.getStore('Cabs').supersync(function(recs) {
-            Ext.Viewport.unmask();
+        store.removeAll();
+        store.sync({
+            success: function(batch){
+                /* 
+                 * Add the downloaded items array to the Cabs Store
+                 * and sync() the store to start saving the
+                 * records locally.
+                 * When it is done, we can remove the Loading mask.
+                 */
+                store.add(items);
+                store.sync({
+                    success: function(batch){
+                        me.setTitleCount(store.getCount());
+                        store.load();
+                        Ext.Viewport.unmask();
+                    }
+                });
+            }
         });
 
     }
 });
+// END OFFLINESTORAGE-CAB-CONTROLLER-9

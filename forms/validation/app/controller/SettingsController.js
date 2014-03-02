@@ -76,6 +76,7 @@ Ext.define('FindACab.controller.SettingsController', {
 
         //start validating
         var validationObj = model.validate();
+        console.log(validationObj);
 
         if (!validationObj.isValid()) {
             validationObj.each(function(errorObj) {

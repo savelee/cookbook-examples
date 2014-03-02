@@ -490,7 +490,7 @@ Ext.define('Ext.data.Store', {
         proxy: undefined,
 
         /**
-         * @cfg {Object[]} fields
+         * @cfg {Object[]/Ext.util.Collection} fields
          * Returns Ext.util.Collection not just an Object.
          * Use in place of specifying a {@link #model} configuration. The fields should be a
          * set of {@link Ext.data.Field} configuration objects. The store will automatically create a {@link Ext.data.Model}
@@ -498,6 +498,7 @@ Ext.define('Ext.data.Store', {
          * backwards compatibility. For anything more complicated, such as specifying a particular id property or
          * associations, a {@link Ext.data.Model} should be defined and specified for the {@link #model}
          * config.
+         * @return Ext.util.Collection
          * @accessor
          */
         fields: null,

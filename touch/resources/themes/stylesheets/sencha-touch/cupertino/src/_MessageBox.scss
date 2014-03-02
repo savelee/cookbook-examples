@@ -8,7 +8,6 @@
 	max-width: 19em;
 	border: 0px;
 
-	@include box-shadow(0 0 40px rgba(0, 0, 0, .6));
 	@include background-image(linear-gradient(top, rgba(231, 232, 232, 1) 1%, rgba(216, 221, 222, 1) 25%, rgba(231, 232, 232, 1) 100%));
 
 	.x-icon {
@@ -26,12 +25,13 @@
 	}
 
 	.x-msgbox-title {
-		margin-top: 10px;
+		margin-top: 5px;
 		margin-left: 10px;
 		margin-right: 10px;
 
 		.x-title {
 			font-size: 1.2em;
+			padding: 0px;
 			// line-height: 1.7em;
 		}
 	}
@@ -54,16 +54,15 @@
 	}
 
 	.x-field {
-		padding-top: 0px;
+		padding-top: .5em;
 		min-height: .8em;
 		margin: 0 0 .6em 0;
-		background: #fff;
+		background: transparent;
 		@include border-radius(0);
 	}
 
 	.x-field-input {
 		padding-right: 2.2em;
-		border: 1px solid #ccc;
 	}
 
 	.x-form-field {
@@ -72,10 +71,6 @@
 		padding-right: 0 !important;
 		-webkit-appearance: none;
 		background: transparent;
-	}
-
-	.x-field-input {
-		padding-right: 2.2em;
 	}
 }
 

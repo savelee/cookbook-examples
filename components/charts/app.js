@@ -57,25 +57,11 @@ Ext.application({
     },
 
     launch: function() {
-        Utils.Commons.initSenchaMods();
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
         //Initialize the main view
         Ext.Viewport.add(Ext.create('FindACab.view.Main'));
-    
-     /*var chart = new Ext.chart.SpaceFillingChart({
-            series: [{
-                type: 'gauge',
-                minimum: 100,
-                maximum: 800,
-                value: 400,
-                donut: 30,
-                colors: ["#115fa6", "lightgrey"]
-            }]
-        });
-        Ext.Viewport.setLayout('fit');
-        Ext.Viewport.add(chart);*/
 
     },
 
