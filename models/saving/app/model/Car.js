@@ -8,7 +8,14 @@ Ext.define('SaveTest.model.Car', {
 		],
 		proxy: {
             type: 'rest',
-            url : '/cars'
+            //url : '/cars',
+		    format: 'php', 
+		    api: {
+		        create: 'cars/addcar',
+		        update: 'cars/editcar',
+		        read: 'cars/loadcar',
+		        destroy: 'cars/deletecar'
+		    }	
         }
 	}
 });

@@ -64,12 +64,14 @@ Ext.application({
         //create a TaxiService record //<1>
         var taxiAmsterdam = Ext.create('AssociationsTest.model.TaxiService', {
             id: 1,
-            name: 'Taxi Amsterdam'
+            name: 'Taxi Amsterdam',
+            country: 'NL'
         });
 
         var yellowCab = Ext.create('AssociationsTest.model.TaxiService', {
             id: 2,
-            name: 'Yellow Cab'
+            name: 'Yellow Cab',
+            country: 'USA'
         });
 
         //create three Car records //<2>
@@ -103,6 +105,10 @@ console.log("TaxiAmsterdam has the following Cars:", taxiAmsterdamStore.getData(
 console.log("YellowCab has the following Cars:", yellowCabStore.getData());
 console.log("BelongsTo",taxiAmsterdam.cars().first().getTaxiService());
        
+        taxiAmsterdamStore.load(function(records){
+            console.log(records);
+        });
+
     },
 
     onUpdated: function() {

@@ -57,13 +57,12 @@ Ext.application({
         // Initialize the main view
         Ext.Viewport.add(Ext.create('SaveTest.view.Main'));
 
-        var mercedes = Ext.create('SaveTest.model.Car', {
-            id: 1,
+        var car = Ext.create('SaveTest.model.Car', {
             brand: 'Mercedes'
         });
 
-        //save = PUT method
-        mercedes.save({
+        //save = POST method
+        car.save({
             success: function() {
                 console.log('The car record is saved');
             },
@@ -72,8 +71,32 @@ Ext.application({
             }
         });
 
+        //edit = PUT method
+        car = Ext.create('SaveTest.model.Car', {
+            id: '1'
+        });
+        car.set('brand', 'BMW');
+        car.save({
+            success: function() {
+                console.log('The car record is edited');
+            },
+            failure: function(){
+                console.log('The car record could not be edited.');
+            }
+        });
+
+        //load = GET method
+        Ext.ModelManager.getModel('SaveTest.model.Car').load(1, {
+            success: function(car) {
+                console.log("Load Car: " + car.getId());
+            },
+            failure: function(){
+                console.log("The car could not be loaded");
+            }
+        });
+
         //erase = DELETE method
-        mercedes.erase({
+        car.erase({
             success: function() {
                 console.log('The car record is removed');
             },
@@ -81,6 +104,8 @@ Ext.application({
                 console.log('The car record could not be removed.');
             }
         });
+
+
         
     },
 

@@ -27,6 +27,8 @@ Ext.define('FindACab.store.Cabs', {
             }
         }],
 
+
+
         proxy: {
 	        type: 'jsonp',
 	        url: Utils.Commons.YELP_API,

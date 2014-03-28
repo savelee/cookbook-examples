@@ -13,6 +13,13 @@ Ext.define('AssociationsTest.model.Car', {
         }],
         belongsTo: {
             model: 'AssociationsTest.model.TaxiService'
+        },
+        proxy: {
+            type: 'ajax',
+            reader: {
+                rootProperty: 'cars'
+            },
+            url: 'app/data.php'
         }
     }
 });
