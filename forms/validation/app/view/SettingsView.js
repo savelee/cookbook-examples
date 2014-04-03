@@ -6,7 +6,6 @@ Ext.define('FindACab.view.SettingsView', {
             'Ext.form.FieldSet'
     ],
     config: {
-        layout: 'fit',
         title: 'SettingsView',
         items: [{
                 xtype: 'titlebar',
@@ -23,7 +22,7 @@ Ext.define('FindACab.view.SettingsView', {
             }, {
                 xtype: 'fieldset',
                 title: 'Your location',
-                instructions: "In case you do not want the app to detect your location, you can prefill the city and country.",
+                instructions: "Please enter your city and country. (For US addresses please provide city + statecode and country, for example: Naperville IL, USA)",
                 items: [{
                         name: 'city',
                         xtype: 'textfield',
@@ -32,15 +31,16 @@ Ext.define('FindACab.view.SettingsView', {
                         name: 'country',
                         xtype: 'textfield',
                         label: 'Country'
-                    }, {
-                        xtype: 'button',
-                        text: 'Submit',
-                        action: 'submit',
-                        margin: 10,
-                        ui: 'confirm'
                     }
                 ]
 
+            },
+            {
+                xtype: 'button',
+                text: 'Submit',
+                action: 'submit',
+                margin: 10,
+                ui: 'confirm'
             }
 
         ]

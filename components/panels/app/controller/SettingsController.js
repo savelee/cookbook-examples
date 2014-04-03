@@ -26,8 +26,8 @@ Ext.define('FindACab.controller.SettingsController', {
                 modal: true,
                 hideOnMaskTap: true,
                 centered: true,
-                width: '50%',
-                height: 350,
+                width: 320,
+                height: 380,
                 hidden: true,
                 showAnimation: {
                     type: 'popIn',

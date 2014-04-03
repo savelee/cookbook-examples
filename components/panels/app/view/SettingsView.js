@@ -5,7 +5,6 @@ Ext.define('FindACab.view.SettingsView', {
         'Ext.TitleBar'
     ],
     config: {
-        layout: 'fit',
         items: [{
     		xtype: 'titlebar',
     		ui: 'light',

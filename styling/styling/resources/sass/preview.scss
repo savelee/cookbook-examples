@@ -88,8 +88,8 @@ $experimental-support-for-microsoft :false;
 
 .x-toolbar .x-innerhtml {
     font-family: "Lobster"; 
-    font-size: 1.8em; 
-    line-height: 1.4em; 
+    font-size: 1.2em; 
+    line-height: 2em; 
 }
 
 .x-list .x-list-item {
@@ -107,7 +107,7 @@ body {
 .taxitpl {
     h1 {
         font-family: "Bebas";
-        font-size: 2.4em;
+        font-size: 1.8em;
     }
 
     p,
@@ -158,4 +158,8 @@ body {
 
 .error input {
 	border: 3px solid red;
+}
+
+.x-form-fieldset-instructions {
+    text-align: left;
 }

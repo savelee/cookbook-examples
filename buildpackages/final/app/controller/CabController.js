@@ -46,6 +46,7 @@ Ext.define('FindACab.controller.CabController', {
         var me = this;
         Ext.getStore('Cabs').load(function(item) {
             var count = Ext.getStore('Cabs').getCount();
+
             if (count < 1) {
                 me.downloadData();
             } else {
@@ -61,9 +62,8 @@ Ext.define('FindACab.controller.CabController', {
 
     downloadData: function(location) {
         var me = this;
-
         if (!location) {
-            Ext.getStore('Settings').load(function() {
+            Ext.getStore('Settings').load(function(recs) {
                 try {
                     var data = Ext.getStore('Settings').getAt(0);
                     var loc = data.get('city') + " " + data.get('country');
@@ -157,6 +157,9 @@ Ext.define('FindACab.controller.CabController', {
          */
         store.removeAll();
         store.sync({
+            failure: function(batch){
+                console.error(arguments);
+            },
             success: function(batch){
                 /* 
                  * Add the downloaded items array to the Cabs Store
@@ -180,25 +183,34 @@ Ext.define('FindACab.controller.CabController', {
     //filter the store on old records
     //remove them one by one before loading new data
     removeOldData: function(loc, callback){
-        var store = Ext.getStore('Cabs');
-        store.clearFilter();
-        store.filter("userinput", loc);
-        store.load(function(records){
+        if(loc == ""){
+            //this is the very first time you load data
+            //there is nothing to remove, just download
+            callback();
+        } else {
+            var store = Ext.getStore('Cabs');
+            store.clearFilter();
+            store.filter("userinput", loc);
+            store.load(function(records){
 
-            var i = 0,
-                t = records.length;
+                var i = 0,
+                    t = records.length;
 
-                for(i; i<t; i++){
-                    store.remove(records[i]);
-                }
-
-                store.clearFilter();
-                store.sync({
-                    success: function(batch){
-                        callback();
+                    for(i; i<t; i++){
+                        store.remove(records[i]);
                     }
-                }); 
-        });
+
+                    store.clearFilter();
+                    store.sync({
+                        failure: function(){
+                            console.error(arguments);
+                        },
+                        success: function(batch){
+                            callback();
+                        }
+                    }); 
+            });
+        }
     },
 
     setFilterName: function() {

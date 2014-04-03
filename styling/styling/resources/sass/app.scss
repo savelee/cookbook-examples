@@ -107,8 +107,8 @@ $experimental-support-for-microsoft :false;
 // Custom code goes here..
 .x-toolbar .x-innerhtml {
     font-family: "Lobster"; 
-    font-size: 1.8em; 
-    line-height: 1.4em; 
+    font-size: 1.2em; 
+    line-height: 2.0em; 
 }
 
 .x-list .x-list-item {
@@ -126,7 +126,7 @@ body {
 .taxitpl {
     h1 {
         font-family: "Bebas";
-        font-size: 2.4em;
+        font-size: 2.2em;
     }
 
     p,
@@ -158,6 +158,10 @@ body {
     border-radius: 20px;
     margin-left: 2px;
     font-size: 0.7em;
+}
+
+.x-form-fieldset-instructions {
+	text-align: left;
 }
 
 .callnow {

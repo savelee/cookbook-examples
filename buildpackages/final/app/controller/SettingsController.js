@@ -31,8 +31,8 @@ Ext.define('FindACab.controller.SettingsController', {
                 modal: true,
                 hideOnMaskTap: true,
                 centered: true,
-                width: '50%',
-                height: 350,
+                width: 320,
+                height: 380,
                 hidden: true,
                 showAnimation: {
                     type: 'popIn', //fadeIn, fadeOut, popIn, popOut, flip, slideIn, slideOut,
@@ -95,16 +95,18 @@ Ext.define('FindACab.controller.SettingsController', {
             }    
             settingsStore.removeAll();
             settingsStore.add(model.getData());
-            settingsStore.sync();
-
-            //remove all Cabs from store and database
-            this.getApplication().getController('CabController').removeOldData(oldLocation, function(){
-                //remove all Markers from the map
-                me.getApplication().getController('CabController').removeMarkers();
-                //load new data
-                me.getApplication().getController('CabController').loadLocal();
-                //hide loading mask
-                me.getSettingsView().hide();
+            settingsStore.sync({
+                success: function(){
+                     //remove all Cabs from store and database
+                    me.getApplication().getController('CabController').removeOldData(oldLocation, function(){
+                        //remove all Markers from the map
+                        me.getApplication().getController('CabController').removeMarkers();
+                        //load new data
+                        me.getApplication().getController('CabController').loadLocal();
+                        //hide loading mask
+                        me.getSettingsView().hide();
+                    });
+                }
             });
 
         }
